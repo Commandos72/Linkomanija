@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="script.module.simpleplugin"
+   name="SimplePlugin"
+   version="2.1.0"
+   provider-name="Roman V.M.">
+  <requires>
+    <import addon="xbmc.python" version="2.19.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="libs" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">SimplePlugin micro-framework</summary>
+    <description lang="en">SimplePlugin micro-framework that simplifies Kodi content plugin programming.</description>
+    <license>GNU GPL v.3</license>
+    <forum>http://forum.kodi.tv/showthread.php?tid=237532</forum>
+    <website>http://romanvm.github.io/script.module.simpleplugin</website>
+    <email>romanvm@yandex.ua</email>
+    <source>https://github.com/romanvm/script.module.simpleplugin</source>
+  </extension>
+</addon>
+
+<addon id="script.module.torrent2http" name="torrent2http" version="0.2.8" provider-name="anteo,DiMartino,-=Vd=-">
+    <requires>
+        <import addon="xbmc.python" version="2.14.0"/>
+		<import addon="script.module.requests" optional="false"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.python.script" library="main.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>en</language>
+        <summary lang="en">Downloads torrents and share it over HTTP</summary>
+        <summary lang="ru">Загружает торренты и раздает их по HTTP</summary>
+        <description lang="ru">Обеспечивает последовательную (sequential) загрузку торрентов для потокового онлайн просмотра через HTTP. Основан на библиотеке LibTorrent.</description>
+        <description lang="en">Provides sequential torrent downloading for online streaming video and other media over HTTP.</description>
+        <email>anteo@academ.org</email>
+    </extension>
+</addon>
+
+<addon id="script.module.vd-common" name="vd-common" version="0.1.0" provider-name="-=Vd=-">
+    <requires>
+      <import addon="xbmc.python" version="2.1.0"/>
+      <import addon="script.module.requests"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+    	<platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="script.module.vsdbg" name="Visual Studio debug" version="0.2.1" provider-name="-=Vd=-">
+    <extension point="xbmc.python.module" library="lib"/>
+	  <extension point="xbmc.python.script" library="main.py">
+		    <provides>executable</provides>
+	  </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <language>en</language>
+        <summary lang="en">Python tools for Visual Studio debug</summary>
+    </extension>
+</addon>
+</addons>
