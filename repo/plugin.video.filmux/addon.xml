@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.filmux" name="Filmux.org" version="0.2.10~beta2" provider-name="min">
+    <requires>
+		<import addon="xbmc.python" version="2.14.0"/>
+		<import addon="script.module.beautifulsoup4" version="4.3.2"/>
+		<import addon="plugin.video.youtube" version="5.1.12" optional="true"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Filmux.org - Filmai online</summary>
+		<description lang="en">Filmux - online kino teatras, kuriame galėsite žiūrėti filmus, serialus, animaciją online nemokamai ir be registracijos. Filmai, serialai, animacija, online.</description>
+		<license>GNU General Public License, v2</license>
+	</extension>
+</addon>
