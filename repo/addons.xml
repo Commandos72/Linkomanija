@@ -39,6 +39,20 @@
     			<source>https://github.com/Vytax/plugin.weather.meteo.lt</source>			
   		</extension>
 	
+	<addon id="repository.lt" name="Lithuanian Kodi Addons" version="1.0.0" provider-name="Vytax">
+	<extension point="xbmc.addon.repository" name="Lithuanian Kodi Addons">
+		<info compressed="true">https://raw.github.com/vytax/kodi-repo/master/repo/addons.xml</info>
+		<checksum>https://raw.github.com/vytax/kodi-repo/master/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.github.com/vytax/kodi-repo/master/repo/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Install Lithuanian Addons</summary>
+		<summary lang="lt">Įdiekite lietuviškus įskiepius</summary>
+		<description lang="en">Download and install Lithuanian addons</description>
+		<description lang="lt">Parsisiųskite ir įdiekite lietuviškus įskiepius</description>
+		<platform>all</platform>
+	</extension>
+	
 	<addon id="plugin.video.showday.tv"
        name="Сериалы Showday"
                             version="1.0.18"
