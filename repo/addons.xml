@@ -1,120 +1,118 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addons>
-<addon id="plugin.video.linkomanija" name="Linkomanija" version="0.1.5" provider-name="-=Vd=-, Commandos">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.vd-common"/>
-    <import addon="script.module.torrent2http"/>
-    <import addon="script.module.beautifulsoup4"/>
-    <import addon="script.module.requests"/>
-    <import addon="script.module.simpleplugin"/>
-    <import addon="script.module.vsdbg"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_gb">Legendary - Linkomanija.net</summary>
-	  <summary lang="lt_lt">Legendinė - Linkomanija.net</summary>
-	  <summary lang="ru_ru">Легендарная - Linkomanija.net </summary>
-	  <description lang="eg_gb">Linkomanija.net From now on you will be able to watch movies, serials, cartoons</description>
-	  <description lang="lt_lt">Linkomanija.net LINKOMANIJOS PIRATAI baltojo megstuko prakeiksmas tęsiasi nuo šiol galėsite žiūrėti filmus, serialus, animaciją</description>
-	  <description lang="ru_ru">Linkomanija.net С этого момента вы сможете смотреть фильмы, сериалы, мультфильмы</description>
-    <disclaimer lang="en_gb"></disclaimer>
-    <language>en, lt, ru</language>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="repository.commandos" version="1.0.0" name="Commandos repository" provider-name="Commandos">
-<extension point="xbmc.addon.metadata">
-  <summary lang="en">Commandos repository</summary>
-  <description lang="en">Addon repository by Commandos repository</description>
-  <platform>all</platform>
-</extension>
-<extension point="xbmc.addon.repository" name="Commandos repository">
-  <info compressed="false">http://github.com/Commandos72/Linkomanija/raw/master/repo/addons.xml</info>
-  <checksum>http://github.com/Commandos72/Linkomanija/raw/master/repo/addons.xml</checksum>
-  <datadir zip="true">http://github.com/Commandos72/Linkomanija/raw/master/repo</datadir>
-</extension>
-</addon>
-
-<addon id="repository.vd" version="1.0.0" name="-=Vd=- Repository" provider-name="-=Vd=-">
-<extension point="xbmc.addon.metadata">
-  <summary lang="en">-=Vd=- Repository</summary>
-  <summary lang="ru">Репозиторий -=Vd=-</summary>
-  <description lang="en">Addon repository by -=Vd=-</description>
-  <description lang="ru">Репозиторий дополнений -=Vd=-</description>
-  <platform>all</platform>
-</extension>
-<extension point="xbmc.addon.repository" name="vd repository">
-  <info compressed="false">http://vadyur.github.io/kodi_repo/repo/addons.xml</info>
-  <checksum>http://vadyur.github.io/kodi_repo/repo/addons.xml.md5</checksum>
-  <datadir zip="true">http://vadyur.github.io/kodi_repo/repo</datadir>
-</extension>
-</addon>
-
-<addon id="script.module.simpleplugin"
-   name="SimplePlugin"
-   version="2.1.0"
-   provider-name="Roman V.M.">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="libs" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <summary lang="en">SimplePlugin micro-framework</summary>
-    <description lang="en">SimplePlugin micro-framework that simplifies Kodi content plugin programming.</description>
-    <license>GNU GPL v.3</license>
-    <forum>http://forum.kodi.tv/showthread.php?tid=237532</forum>
-    <website>http://romanvm.github.io/script.module.simpleplugin</website>
-    <email>romanvm@yandex.ua</email>
-    <source>https://github.com/romanvm/script.module.simpleplugin</source>
-  </extension>
-</addon>
-
-<addon id="script.module.torrent2http" name="torrent2http" version="0.2.8" provider-name="anteo,DiMartino,-=Vd=-">
-    <requires>
-        <import addon="xbmc.python" version="2.14.0"/>
-		<import addon="script.module.requests" optional="false"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib"/>
-	<extension point="xbmc.python.script" library="main.py">
-		<provides>executable</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <language>en</language>
-        <summary lang="en">Downloads torrents and share it over HTTP</summary>
-        <summary lang="ru">Загружает торренты и раздает их по HTTP</summary>
-        <description lang="ru">Обеспечивает последовательную (sequential) загрузку торрентов для потокового онлайн просмотра через HTTP. Основан на библиотеке LibTorrent.</description>
-        <description lang="en">Provides sequential torrent downloading for online streaming video and other media over HTTP.</description>
-        <email>anteo@academ.org</email>
-    </extension>
-</addon>
-
-<addon id="script.module.vd-common" name="vd-common" version="0.1.0" provider-name="-=Vd=-">
-    <requires>
-      <import addon="xbmc.python" version="2.1.0"/>
-      <import addon="script.module.requests"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib"/>
-    <extension point="xbmc.addon.metadata">
-    	<platform>all</platform>
-    </extension>
-</addon>
-
-<addon id="script.module.vsdbg" name="Visual Studio debug" version="0.2.1" provider-name="-=Vd=-">
-    <extension point="xbmc.python.module" library="lib"/>
-	  <extension point="xbmc.python.script" library="main.py">
-		    <provides>executable</provides>
-	  </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <language>en</language>
-        <summary lang="en">Python tools for Visual Studio debug</summary>
-    </extension>
-</addon>
-</addons>
+<?xml version="1.0" encoding="utf-8"?><addons>	<addon id="plugin.video.linkomanija" name="Linkomanija" provider-name="-=Vd=-, Commandos" version="0.1.5">		
+  		<requires>			
+    			<import addon="xbmc.python" version="2.1.0"/>			
+				<import addon="script.module.vd-common"/>			
+    			<import addon="script.module.torrent2http"/>			
+    			<import addon="script.module.beautifulsoup4"/>			
+    			<import addon="script.module.requests"/>			
+    			<import addon="script.module.simpleplugin"/>			
+    			<import addon="script.module.vsdbg"/>			
+  		</requires>		
+  		<extension library="addon.py" point="xbmc.python.pluginsource">			
+    			<provides>video</provides>			
+  		</extension>		
+  		<extension point="xbmc.addon.metadata">			
+    			<summary lang="en_gb">Legendary - Linkomanija.net</summary>			
+	  			<summary lang="lt_lt">Legendinė - Linkomanija.net</summary>			
+	  			<summary lang="ru_ru">Легендарная - Linkomanija.net </summary>			 
+	  			<description lang="eg_gb">Linkomanija.net From now on you will be able to watch movies, serials, cartoons</description>			
+	  			<description lang="lt_lt">Linkomanija.net LINKOMANIJOS PIRATAI baltojo megstuko prakeiksmas tęsiasi nuo šiol galėsite žiūrėti filmus, serialus, animaciją</description>			
+	  			<description lang="ru_ru">Linkomanija.net С этого момента вы сможете смотреть фильмы, сериалы, мультфильмы</description>			
+    			<disclaimer lang="en_gb"/>			
+    			<language>en, lt, ru</language>			
+    			<platform>all</platform>			
+  		</extension>		
+	</addon>	<addon id="plugin.weather.meteo.lt" name="Lithuanian Hydrometeorological Service" provider-name="Vytautas Mickus" version="0.3.2">		
+  		<requires>			
+    			<import addon="xbmc.python" version="2.1.0"/>			
+    			<import addon="script.module.simplejson" version="3.3.0"/>			
+    			<import addon="script.module.beautifulsoup4" version="4.3.1"/>			
+  		</requires>		
+  		<extension library="default.py" point="xbmc.python.weather"/>		
+  		<extension point="xbmc.addon.metadata">			 
+    			<summary lang="en">Weather forecast from meteo.lt</summary>			
+    			<summary lang="lt_LT">Orų prognozė iš meteo.lt</summary>			
+    			<language>lt</language>			
+    			<platform>all</platform>			
+    			<license>GPLv2</license>			
+    			<email>vmickus@gmail.com</email>			
+    			<source>https://github.com/Vytax/plugin.weather.meteo.lt</source>			
+  		</extension>		
+	</addon>	<addon id="repository.commandos" name="Commandos repository" provider-name="Commandos" version="1.0.0">		
+		<extension point="xbmc.addon.metadata">			
+  			<summary lang="en">Commandos repository</summary>			
+  			<description lang="en">Addon repository by Commandos repository</description>			
+  			<platform>all</platform>			
+		</extension>		
+		<extension name="Commandos repository" point="xbmc.addon.repository">			
+  			<info compressed="false">http://github.com/Commandos72/Linkomanija/raw/master/repo/addons.xml</info>			
+  			<checksum>http://github.com/Commandos72/Linkomanija/raw/master/repo/addons.xml</checksum>			
+  			<datadir zip="true">http://github.com/Commandos72/Linkomanija/raw/master/repo</datadir>			
+		</extension>		
+	</addon>	<addon id="repository.vd" name="-=Vd=- Repository" provider-name="-=Vd=-" version="1.0.0">		
+		<extension point="xbmc.addon.metadata">			
+  			<summary lang="en">-=Vd=- Repository</summary>			
+  			<summary lang="ru">Репозиторий -=Vd=-</summary>			
+  			<description lang="en">Addon repository by -=Vd=-</description>			
+  			<description lang="ru">Репозиторий дополнений -=Vd=-</description>			
+  			<platform>all</platform>			
+		</extension>		
+		<extension name="vd repository" point="xbmc.addon.repository">			
+  			<info compressed="false">http://vadyur.github.io/kodi_repo/repo/addons.xml</info>			
+  			<checksum>http://vadyur.github.io/kodi_repo/repo/addons.xml.md5</checksum>			
+  			<datadir zip="true">http://vadyur.github.io/kodi_repo/repo</datadir>			
+		</extension>		
+	</addon>	<addon id="script.module.simpleplugin" name="SimplePlugin" provider-name="Roman V.M." version="2.1.0">		
+  		<requires>			
+    			<import addon="xbmc.python" version="2.19.0"/>			
+  		</requires>		
+  		<extension library="libs" point="xbmc.python.module"/>		
+  		<extension point="xbmc.addon.metadata">			
+    			<platform>all</platform>			
+    			<summary lang="en">SimplePlugin micro-framework</summary>			
+    			<description lang="en">SimplePlugin micro-framework that simplifies Kodi content plugin programming.</description>			
+    			<license>GNU GPL v.3</license>			
+    			<forum>http://forum.kodi.tv/showthread.php?tid=237532</forum>			
+    			<website>http://romanvm.github.io/script.module.simpleplugin</website>			
+    			<email>romanvm@yandex.ua</email>			
+    			<source>https://github.com/romanvm/script.module.simpleplugin</source>			
+  		</extension>		
+	</addon>	<addon id="script.module.torrent2http" name="torrent2http" provider-name="anteo,DiMartino,-=Vd=-" version="0.2.8">		
+    		<requires>			
+        			<import addon="xbmc.python" version="2.14.0"/>			
+					<import addon="script.module.requests" optional="false"/>			
+    		</requires>		
+    		<extension library="lib" point="xbmc.python.module"/>		
+			<extension library="main.py" point="xbmc.python.script">			
+					<provides>executable</provides>			
+			</extension>		
+			<extension library="service.py" point="xbmc.service" start="startup"/>		
+    		<extension point="xbmc.addon.metadata">			
+        			<platform>all</platform>			
+        			<language>en</language>			
+        			<summary lang="en">Downloads torrents and share it over HTTP</summary>			
+        			<summary lang="ru">Загружает торренты и раздает их по HTTP</summary>			
+        			<description lang="ru">Обеспечивает последовательную (sequential) загрузку торрентов для потокового онлайн просмотра через HTTP. Основан на библиотеке LibTorrent.</description>			
+        			<description lang="en">Provides sequential torrent downloading for online streaming video and other media over HTTP.</description>			
+        			<email>anteo@academ.org</email>			
+    		</extension>		
+	</addon>	<addon id="script.module.vd-common" name="vd-common" provider-name="-=Vd=-" version="0.1.0">		
+    		<requires>			
+      			<import addon="xbmc.python" version="2.1.0"/>			
+      			<import addon="script.module.requests"/>			
+    		</requires>		
+    		<extension library="lib" point="xbmc.python.module"/>		
+    		<extension point="xbmc.addon.metadata">			
+    				<platform>all</platform>			
+    		</extension>		
+	</addon>	<addon id="script.module.vsdbg" name="Visual Studio debug" provider-name="-=Vd=-" version="0.2.1">		
+    		<extension library="lib" point="xbmc.python.module"/>		
+	  		<extension library="main.py" point="xbmc.python.script">			
+		    			<provides>executable</provides>			
+	  		</extension>		
+    		<extension point="xbmc.addon.metadata">			
+        			<platform>all</platform>			
+        			<language>en</language>			
+        			<summary lang="en">Python tools for Visual Studio debug</summary>			
+    		</extension>		
+	</addon></addons>
