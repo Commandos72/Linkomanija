@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><addons>	<addon id="plugin.video.linkomanija" name="Linkomanija" provider-name="-=Vd=-, Commandos" version="0.1.5">		
+<?xml version="1.0" encoding="utf-8"?><addons>	<addon id="script.module.vsdbg" name="Visual Studio debug" provider-name="-=Vd=-" version="0.2.1">		
+    		<extension library="lib" point="xbmc.python.module"/>		
+	  		<extension library="main.py" point="xbmc.python.script">			
+		    			<provides>executable</provides>			
+	  		</extension>		
+    		<extension point="xbmc.addon.metadata">			
+        			<platform>all</platform>			
+        			<language>en</language>			
+        			<summary lang="en">Python tools for Visual Studio debug</summary>			
+    		</extension>		
+	</addon>	<addon id="plugin.video.filmix.net.dev" name="Filmix.Net" provider-name="Evgenii Devisok aka evgen_dev" version="0.3.0">		
+			<requires>			
+					<import addon="xbmc.python" version="2.1.0"/>			
+					<import addon="script.module.xbmcup" version="0.1.1"/>			
+			</requires>		
+			<extension library="addon.py" point="xbmc.python.pluginsource" provides="video">			
+					<provides>video</provides>			
+			</extension>		
+			<extension point="xbmc.addon.metadata">			
+					<summary>Filmix.Net</summary>			
+					<description>
+			 Filmix.Net - Вашему вниманию полнометражное кино и телесериалы, мультфильмы, трейлеры.
+		</description>			
+					<platform>all</platform>			
+					<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>			
+					<forum>http://xbmc.ru/forum/showthread.php?t=11719</forum>			
+					<email>xbmc@devisok.org</email>			
+			</extension>		
+	</addon>	<addon id="plugin.video.filmux" name="Filmux.org" provider-name="min" version="0.2.10~beta2">		
+    		<requires>			
+					<import addon="xbmc.python" version="2.14.0"/>			
+					<import addon="script.module.beautifulsoup4" version="4.3.2"/>			
+					<import addon="plugin.video.youtube" optional="true" version="5.1.12"/>			
+			</requires>		
+			<extension library="addon.py" point="xbmc.python.pluginsource">			
+					<provides>video</provides>			
+			</extension>		
+			<extension point="xbmc.addon.metadata">			
+					<platform>all</platform>			
+					<summary lang="en">Filmux.org - Filmai online</summary>			
+					<description lang="en">Filmux - online kino teatras, kuriame galėsite žiūrėti filmus, serialus, animaciją online nemokamai ir be registracijos. Filmai, serialai, animacija, online.</description>			
+					<license>GNU General Public License, v2</license>			
+			</extension>		
+	</addon>	<addon id="script.module.simpleplugin" name="SimplePlugin" provider-name="Roman V.M." version="2.1.0">		
+  		<requires>			
+    			<import addon="xbmc.python" version="2.19.0"/>			
+  		</requires>		
+  		<extension library="libs" point="xbmc.python.module"/>		
+  		<extension point="xbmc.addon.metadata">			
+    			<platform>all</platform>			
+    			<summary lang="en">SimplePlugin micro-framework</summary>			
+    			<description lang="en">SimplePlugin micro-framework that simplifies Kodi content plugin programming.</description>			
+    			<license>GNU GPL v.3</license>			
+    			<forum>http://forum.kodi.tv/showthread.php?tid=237532</forum>			
+    			<website>http://romanvm.github.io/script.module.simpleplugin</website>			
+    			<email>romanvm@yandex.ua</email>			
+    			<source>https://github.com/romanvm/script.module.simpleplugin</source>			
+  		</extension>		
+	</addon>	<addon id="script.module.vd-common" name="vd-common" provider-name="-=Vd=-" version="0.1.0">		
+    		<requires>			
+      			<import addon="xbmc.python" version="2.1.0"/>			
+      			<import addon="script.module.requests"/>			
+    		</requires>		
+    		<extension library="lib" point="xbmc.python.module"/>		
+    		<extension point="xbmc.addon.metadata">			
+    				<platform>all</platform>			
+    		</extension>		
+	</addon>	<addon id="plugin.video.showday.tv" name="Сериалы Showday" provider-name="Silen" version="1.0.18">		
+  		<requires>			
+    			<import addon="xbmc.python" version="2.1.0"/>			
+  		</requires>		
+  		<extension library="default.py" point="xbmc.python.pluginsource" provides="video">			
+    			<provides>video</provides>			
+  		</extension>		
+  		<extension point="xbmc.addon.metadata">			
+    			<summary>showday.tv</summary>			
+    			<description>SHOWDAY.TV - сериал на каждый день!
+</description>			
+    			<platform>all</platform>			
+  		</extension>		
+	</addon>	<addon id="script.module.torrent2http" name="torrent2http" provider-name="anteo,DiMartino,-=Vd=-" version="0.2.8">		
+    		<requires>			
+        			<import addon="xbmc.python" version="2.14.0"/>			
+					<import addon="script.module.requests" optional="false"/>			
+    		</requires>		
+    		<extension library="lib" point="xbmc.python.module"/>		
+			<extension library="main.py" point="xbmc.python.script">			
+					<provides>executable</provides>			
+			</extension>		
+			<extension library="service.py" point="xbmc.service" start="startup"/>		
+    		<extension point="xbmc.addon.metadata">			
+        			<platform>all</platform>			
+        			<language>en</language>			
+        			<summary lang="en">Downloads torrents and share it over HTTP</summary>			
+        			<summary lang="ru">Загружает торренты и раздает их по HTTP</summary>			
+        			<description lang="ru">Обеспечивает последовательную (sequential) загрузку торрентов для потокового онлайн просмотра через HTTP. Основан на библиотеке LibTorrent.</description>			
+        			<description lang="en">Provides sequential torrent downloading for online streaming video and other media over HTTP.</description>			
+        			<email>anteo@academ.org</email>			
+    		</extension>		
+	</addon>	<addon id="plugin.video.linkomanija" name="Linkomanija" provider-name="-=Vd=-, Commandos" version="0.1.5">		
   		<requires>			
     			<import addon="xbmc.python" version="2.1.0"/>			
 				<import addon="script.module.vd-common"/>			
@@ -22,6 +121,30 @@
     			<language>en, lt, ru</language>			
     			<platform>all</platform>			
   		</extension>		
+	</addon>	<addon id="repository.lt" name="Lithuanian Kodi Addons" provider-name="Vytax" version="1.0.0">		
+			<extension name="Lithuanian Kodi Addons" point="xbmc.addon.repository">			
+					<info compressed="true">https://raw.github.com/vytax/kodi-repo/master/repo/addons.xml</info>			
+					<checksum>https://raw.github.com/vytax/kodi-repo/master/repo/addons.xml.md5</checksum>			
+					<datadir zip="true">https://raw.github.com/vytax/kodi-repo/master/repo/</datadir>			
+			</extension>		
+			<extension point="xbmc.addon.metadata">			
+					<summary lang="en">Install Lithuanian Addons</summary>			
+					<summary lang="lt">Įdiekite lietuviškus įskiepius</summary>			
+					<description lang="en">Download and install Lithuanian addons</description>			
+					<description lang="lt">Parsisiųskite ir įdiekite lietuviškus įskiepius</description>			
+					<platform>all</platform>			
+			</extension>		
+	</addon>	<addon id="repository.commandos" name="Commandos repository" provider-name="Commandos" version="1.0.0">		
+		<extension point="xbmc.addon.metadata">			
+  			<summary lang="en">Commandos repository</summary>			
+  			<description lang="en">Addon repository by Commandos repository</description>			
+  			<platform>all</platform>			
+		</extension>		
+		<extension name="Commandos repository" point="xbmc.addon.repository">			
+  			<info compressed="false">http://github.com/Commandos72/Linkomanija/raw/master/repo/addons.xml</info>			
+  			<checksum>http://github.com/Commandos72/Linkomanija/raw/master/repo/addons.xml</checksum>			
+  			<datadir zip="true">http://github.com/Commandos72/Linkomanija/raw/master/repo</datadir>			
+		</extension>		
 	</addon>	<addon id="plugin.weather.meteo.lt" name="Lithuanian Hydrometeorological Service" provider-name="Vytautas Mickus" version="0.3.2">		
   		<requires>			
     			<import addon="xbmc.python" version="2.1.0"/>			
@@ -37,152 +160,56 @@
     			<license>GPLv2</license>			
     			<email>vmickus@gmail.com</email>			
     			<source>https://github.com/Vytax/plugin.weather.meteo.lt</source>			
-  		</extension>
-	
-	<addon id="repository.lt" name="Lithuanian Kodi Addons" version="1.0.0" provider-name="Vytax">
-	<extension point="xbmc.addon.repository" name="Lithuanian Kodi Addons">
-		<info compressed="true">https://raw.github.com/vytax/kodi-repo/master/repo/addons.xml</info>
-		<checksum>https://raw.github.com/vytax/kodi-repo/master/repo/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.github.com/vytax/kodi-repo/master/repo/</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Install Lithuanian Addons</summary>
-		<summary lang="lt">Įdiekite lietuviškus įskiepius</summary>
-		<description lang="en">Download and install Lithuanian addons</description>
-		<description lang="lt">Parsisiųskite ir įdiekite lietuviškus įskiepius</description>
-		<platform>all</platform>
-	</extension>
-	
-	<addon id="plugin.video.showday.tv"
-       name="Сериалы Showday"
-                            version="1.0.18"
-       provider-name="Silen">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             provides="video"
-             library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>showday.tv</summary>
-    <description>SHOWDAY.TV - сериал на каждый день!
-</description>
-    <platform>all</platform>
-  </extension>
-	
-	<addon id="plugin.video.filmix.net.dev"
-       name="Filmix.Net"
-       version="0.3.0"
-       provider-name="Evgenii Devisok aka evgen_dev">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.xbmcup" version="0.1.1"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" provides="video" library="addon.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary>Filmix.Net</summary>
-		<description>
-			 Filmix.Net - Вашему вниманию полнометражное кино и телесериалы, мультфильмы, трейлеры.
-		</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-		<forum>http://xbmc.ru/forum/showthread.php?t=11719</forum>
-		<email>xbmc@devisok.org</email>
-	</extension>
-	
-	<addon id="plugin.video.filmux" name="Filmux.org" version="0.2.10~beta2" provider-name="min">
-    <requires>
-		<import addon="xbmc.python" version="2.14.0"/>
-		<import addon="script.module.beautifulsoup4" version="4.3.2"/>
-		<import addon="plugin.video.youtube" version="5.1.12" optional="true"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="addon.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Filmux.org - Filmai online</summary>
-		<description lang="en">Filmux - online kino teatras, kuriame galėsite žiūrėti filmus, serialus, animaciją online nemokamai ir be registracijos. Filmai, serialai, animacija, online.</description>
-		<license>GNU General Public License, v2</license>
-	</extension>
-		
-		<addon
-    id="context.addtolib"
-    name="Add to Lib"
-    version="1.0.16"
-    provider-name="Taifxx"
-    >
-  <requires>
-    <import 
-        addon="xbmc.python"
-        version="2.1.0"
-    />
-  </requires>
-  <extension 
-      point="kodi.context.item" 
-      library="context.py"
-  >
-		<item>
-			<label>$ADDON[context.addtolib 29999]</label>
-			<!--visible>Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos)|Container.Content(episodes)</visible-->
-			<visible>True</visible>
-		</item>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="login"/>
-  <extension point="xbmc.python.script" library="context.py"/>
-  <extension point="xbmc.addon.metadata">
+  		</extension>		
+	</addon>	<addon id="context.addtolib" name="Add to Lib" provider-name="Taifxx" version="1.0.16">		
+  		<requires>			
+    			<import addon="xbmc.python" version="2.1.0"/>			
+  		</requires>		
+  		<extension library="context.py" point="kodi.context.item">			
+					<item>				
+							<label>$ADDON[context.addtolib 29999]</label>				
+							<!--visible>Container.Content(tvshows)|Container.Content(movies)|Container.Content(musicvideos)|Container.Content(episodes)</visible-->				
+							<visible>True</visible>				
+					</item>			
+  		</extension>		
+  		<extension library="service.py" point="xbmc.service" start="login"/>		
+  		<extension library="context.py" point="xbmc.python.script"/>		
+  		<extension point="xbmc.addon.metadata">			
   
-    <summary lang="en">Adds links to movies and TV shows from other add-ons in Kodi library</summary>
-    <summary lang="ru">Добавляет ссылки на фильмы и сериалы из других дополнений в библиотеку Kodi</summary>
-    <summary lang="es">Añadir enlaces a Películas y Series de otros add-ons en Kodi biblioteca</summary> 
+    			<summary lang="en">Adds links to movies and TV shows from other add-ons in Kodi library</summary>			
+    			<summary lang="ru">Добавляет ссылки на фильмы и сериалы из других дополнений в библиотеку Kodi</summary>			
+    			<summary lang="es">Añadir enlaces a Películas y Series de otros add-ons en Kodi biblioteca</summary>			 
     
-    <description lang="en">Context menu item to add links to TV shows and movies from other add-ons in Kodi library, as .strm files. The addition allows you to check for new episodes and seasons, manage added content, and to receive full information from the library to playable .strm files. 
+    			<description lang="en">Context menu item to add links to TV shows and movies from other add-ons in Kodi library, as .strm files. The addition allows you to check for new episodes and seasons, manage added content, and to receive full information from the library to playable .strm files. 
 More information can be found in the help section.
 
-Details on http://taifxx.github.io/xxtrep</description>
-    <description lang="ru">Элемент контекстного меню для добавления ссылок на сериалы и фильмы из других дополнений в библиотеку Kodi, как .strm файлов. Дополнение позволяет проверять наличие новых эпизодов и сезонов, управлять добавленным контентом, а также получать полноценную информацию из библиотеки для воспроизводимых .strm файлов. 
+Details on http://taifxx.github.io/xxtrep</description>			
+    			<description lang="ru">Элемент контекстного меню для добавления ссылок на сериалы и фильмы из других дополнений в библиотеку Kodi, как .strm файлов. Дополнение позволяет проверять наличие новых эпизодов и сезонов, управлять добавленным контентом, а также получать полноценную информацию из библиотеки для воспроизводимых .strm файлов. 
 Больше информации можно получить в разделе Помощи дополнения.
 
-Детали на http://taifxx.github.io/xxtrep.ru</description>
-    <description lang="es">Elemento de menú contextual para añadir enlaces a Películas y Series de otros complementos en Kodi biblioteca, como archivos .strm. La adición permite chequear nuevos episodios y temporadas, administrar contenidos agregados, recibir información completa de la biblioteca cuando el video se reproduce.
+Детали на http://taifxx.github.io/xxtrep.ru</description>			
+    			<description lang="es">Elemento de menú contextual para añadir enlaces a Películas y Series de otros complementos en Kodi biblioteca, como archivos .strm. La adición permite chequear nuevos episodios y temporadas, administrar contenidos agregados, recibir información completa de la biblioteca cuando el video se reproduce.
 Más información puede encontrarse en la sección de ayuda. Gracias Ruorbe para la traducción.
 
-Detalles sobre http://taifxx.github.io/xxtrep</description>
+Detalles sobre http://taifxx.github.io/xxtrep</description>			
      
-    <disclaimer lang="en"></disclaimer>
-    <disclaimer lang="ru"></disclaimer>
-    <disclaimer lang="es"></disclaimer>
+    			<disclaimer lang="en"/>			
+    			<disclaimer lang="ru"/>			
+    			<disclaimer lang="es"/>			
     
-    <platform>all</platform>
+    			<platform>all</platform>			
     
-    <website>http://taifxx.github.io/xxtrep</website>
-    <source>https://github.com/Taifxx/xxtrep/tree/master/context.addtolib</source>
+    			<website>http://taifxx.github.io/xxtrep</website>			
+    			<source>https://github.com/Taifxx/xxtrep/tree/master/context.addtolib</source>			
     
-    <forum lang="en">http://forum.kodi.tv/showthread.php?tid=268997</forum>
-    <forum lang="ru">http://xbmc.ru/forum/showthread.php?t=12708</forum>
+    			<forum lang="en">http://forum.kodi.tv/showthread.php?tid=268997</forum>			
+    			<forum lang="ru">http://xbmc.ru/forum/showthread.php?t=12708</forum>			
     
-    <email>xxtrep@yandex.ru</email>
+    			<email>xxtrep@yandex.ru</email>			
     
-    <license>GNU GENERAL PUBLIC LICENSE V3</license>
+    			<license>GNU GENERAL PUBLIC LICENSE V3</license>			
     
-  </extension>
-	
-	
-	</addon>	<addon id="repository.commandos" name="Commandos repository" provider-name="Commandos" version="1.0.0">		
-		<extension point="xbmc.addon.metadata">			
-  			<summary lang="en">Commandos repository</summary>			
-  			<description lang="en">Addon repository by Commandos repository</description>			
-  			<platform>all</platform>			
-		</extension>		
-		<extension name="Commandos repository" point="xbmc.addon.repository">			
-  			<info compressed="false">http://github.com/Commandos72/Linkomanija/raw/master/repo/addons.xml</info>			
-  			<checksum>http://github.com/Commandos72/Linkomanija/raw/master/repo/addons.xml</checksum>			
-  			<datadir zip="true">http://github.com/Commandos72/Linkomanija/raw/master/repo</datadir>			
-		</extension>		
+  		</extension>		
 	</addon>	<addon id="repository.vd" name="-=Vd=- Repository" provider-name="-=Vd=-" version="1.0.0">		
 		<extension point="xbmc.addon.metadata">			
   			<summary lang="en">-=Vd=- Repository</summary>			
@@ -196,57 +223,4 @@ Detalles sobre http://taifxx.github.io/xxtrep</description>
   			<checksum>http://vadyur.github.io/kodi_repo/repo/addons.xml.md5</checksum>			
   			<datadir zip="true">http://vadyur.github.io/kodi_repo/repo</datadir>			
 		</extension>		
-	</addon>	<addon id="script.module.simpleplugin" name="SimplePlugin" provider-name="Roman V.M." version="2.1.0">		
-  		<requires>			
-    			<import addon="xbmc.python" version="2.19.0"/>			
-  		</requires>		
-  		<extension library="libs" point="xbmc.python.module"/>		
-  		<extension point="xbmc.addon.metadata">			
-    			<platform>all</platform>			
-    			<summary lang="en">SimplePlugin micro-framework</summary>			
-    			<description lang="en">SimplePlugin micro-framework that simplifies Kodi content plugin programming.</description>			
-    			<license>GNU GPL v.3</license>			
-    			<forum>http://forum.kodi.tv/showthread.php?tid=237532</forum>			
-    			<website>http://romanvm.github.io/script.module.simpleplugin</website>			
-    			<email>romanvm@yandex.ua</email>			
-    			<source>https://github.com/romanvm/script.module.simpleplugin</source>			
-  		</extension>		
-	</addon>	<addon id="script.module.torrent2http" name="torrent2http" provider-name="anteo,DiMartino,-=Vd=-" version="0.2.8">		
-    		<requires>			
-        			<import addon="xbmc.python" version="2.14.0"/>			
-					<import addon="script.module.requests" optional="false"/>			
-    		</requires>		
-    		<extension library="lib" point="xbmc.python.module"/>		
-			<extension library="main.py" point="xbmc.python.script">			
-					<provides>executable</provides>			
-			</extension>		
-			<extension library="service.py" point="xbmc.service" start="startup"/>		
-    		<extension point="xbmc.addon.metadata">			
-        			<platform>all</platform>			
-        			<language>en</language>			
-        			<summary lang="en">Downloads torrents and share it over HTTP</summary>			
-        			<summary lang="ru">Загружает торренты и раздает их по HTTP</summary>			
-        			<description lang="ru">Обеспечивает последовательную (sequential) загрузку торрентов для потокового онлайн просмотра через HTTP. Основан на библиотеке LibTorrent.</description>			
-        			<description lang="en">Provides sequential torrent downloading for online streaming video and other media over HTTP.</description>			
-        			<email>anteo@academ.org</email>			
-    		</extension>		
-	</addon>	<addon id="script.module.vd-common" name="vd-common" provider-name="-=Vd=-" version="0.1.0">		
-    		<requires>			
-      			<import addon="xbmc.python" version="2.1.0"/>			
-      			<import addon="script.module.requests"/>			
-    		</requires>		
-    		<extension library="lib" point="xbmc.python.module"/>		
-    		<extension point="xbmc.addon.metadata">			
-    				<platform>all</platform>			
-    		</extension>		
-	</addon>	<addon id="script.module.vsdbg" name="Visual Studio debug" provider-name="-=Vd=-" version="0.2.1">		
-    		<extension library="lib" point="xbmc.python.module"/>		
-	  		<extension library="main.py" point="xbmc.python.script">			
-		    			<provides>executable</provides>			
-	  		</extension>		
-    		<extension point="xbmc.addon.metadata">			
-        			<platform>all</platform>			
-        			<language>en</language>			
-        			<summary lang="en">Python tools for Visual Studio debug</summary>			
-    		</extension>		
 	</addon></addons>
