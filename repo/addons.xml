@@ -64,7 +64,8 @@ Detalles sobre http://taifxx.github.io/xxtrep</description>
 					<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>			
 					<forum>http://xbmc.ru/forum/showthread.php?t=11719</forum>			
 					<email>xbmc@devisok.org</email>			
-			</extension>		
+			</extension>	
+	
 	</addon>	<addon id="plugin.video.filmux" name="Filmux.org" provider-name="min" version="0.2.10~beta2">		
     		<requires>			
 					<import addon="xbmc.python" version="2.14.0"/>			
@@ -90,7 +91,7 @@ Detalles sobre http://taifxx.github.io/xxtrep</description>
     			<import addon="script.module.requests"/>			
     			<import addon="script.module.simpleplugin"/>			
     			<import addon="script.module.vsdbg"/>			
-  		</requires>		
+  		</requires>	
   		<extension library="addon.py" point="xbmc.python.pluginsource">			
     			<provides>video</provides>			
   		</extension>		
@@ -105,6 +106,85 @@ Detalles sobre http://taifxx.github.io/xxtrep</description>
     			<language>en, lt, ru</language>			
     			<platform>all</platform>			
   		</extension>	
+	
+	<addon id="script.media.aggregator" version="0.25.3" name="[COLOR=FF008000]Media[/COLOR] [COLOR=FFA0522D]Aggregator[/COLOR]" provider-name="-=Vd=-">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.yatp" optional="true"/>
+    <import addon="script.module.torrent2http" optional="false"/>
+    <import addon="script.module.torrent.ts" optional="true"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.0"/>
+    <import addon="script.module.requests" optional="false"/>
+    <import addon="script.module.feedparser" optional="false"/>
+    <import addon="script.module.myconnpy" optional="false"/>
+    <import addon="script.module.pyxbmct" version="1.1.4"/>
+    <import addon="script.module.chardet"/>
+    <import addon="script.module.shikimori.core" optional="true"/>
+    <import addon="script.module.vsdbg"/>
+	
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="player.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <menu>
+        <label>[COLOR=FF008000]Media[/COLOR] [COLOR=FFA0522D]Aggregator[/COLOR]</label>
+        <item library="context.py">
+          <label>ВЫБОР ИСТОЧНИКОВ...</label>
+          <visible>[ StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,episode) ] + StringCompare(ListItem.FileExtension,strm)</visible>
+        </item>
+        <item library="context_show_similar.py">
+          <label>Смотри также</label>
+          <visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,episode) | StringCompare(ListItem.dbtype,tvshow)</visible>
+        </item>
+        <item library="context_get_sources.py">
+          <label>Поиск источников</label>
+          <visible>StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,episode) | StringCompare(ListItem.dbtype,tvshow)</visible>
+        </item>
+        <item library="context_united_search.py">
+          <label>Поиск в United Search</label>
+          <visible>[StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,episode) | StringCompare(ListItem.dbtype,tvshow)] + !String.IsEmpty(System.AddonTitle(plugin.video.united.search)) ]</visible>
+        </item>
+        <item library="context_search.py">
+          <label>Поиск</label>
+          <visible>true</visible>
+        </item>
+        <item library="context_settings.py">
+          <label>НАСТРОЙКИ...</label>
+          <visible>true</visible>
+        </item>
+      </menu>
+    </menu>
+  </extension>
+  <extension point="kodi.context.item" library="context.py">
+    <item>
+      <label>Media Aggregator: выбор</label>
+      <visible>[ StringCompare(ListItem.dbtype,movie) | StringCompare(ListItem.dbtype,episode) ] + StringCompare(ListItem.FileExtension,strm) + String.StartsWith(System.BuildVersion, 15)</visible>
+    </item>
+  </extension>
+  <extension point="kodi.context.item" library="context_tvshow.py">
+    <item>
+      <label>Media Aggregator: поиск источников</label>
+      <visible>StringCompare(ListItem.dbtype,tvshow) + String.StartsWith(System.BuildVersion, 15)</visible>
+    </item>
+  </extension>
+  <extension point="kodi.context.item" library="context_search.py">
+    <item>
+      <label>Media Aggregator: поиск</label>
+      <visible>String.StartsWith(System.BuildVersion, 15)</visible>
+    </item>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="ru">Создавайте свою онлайн медиатеку</summary>
+    <description lang="ru">Media Aggregator загружает данные раздач (bluebird-hd.org, tr.anidub.com, nnm-club.name, rutor.info) и создаёт локальную онлайн библиотеку</description>
+    <forum>http://xbmc.ru/forum/showthread.php?t=10592</forum>
+  </extension>
+  <extension point="xbmc.service" library="service.py"/>
+  <extension point="xbmc.python.module"/>
+</addon>
+
 	
 	</addon>	<addon id="plugin.video.showday.tv" name="Сериалы Showday" provider-name="Silen" version="1.0.18">		
   		<requires>			
