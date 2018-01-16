@@ -1,0 +1,20 @@
+[COLOR springgreen]Elementum:[/COLOR]
+
+[COLOR red]-------------------------------------------------------------------------------------------------------[/COLOR]
+
+[B][COLOR red]v0.0.29[/COLOR][/B]
+    - Global changes to Library management
+    - Trakt Watched items are synced to Kodi library
+    - Kodi Watched items are synced to Trakt, as well
+    - Torrent library updated to latest version
+    - [B][COLOR red]This is a big change release, if you encounter a bug, please report it on github.com![/COLOR][/B]
+
+[B][COLOR red]v0.0.26[/COLOR][/B]
+    - Added Changelog
+    - Caching moved to the database
+    - Added proper OS signal handling
+    - Fixed not-removed files after torrent removed
+    - Fixed rate limiting for download/upload
+    - Seeding is not disabled by default
+    - New rate limiter in use
+    - Faster tmdb listings
